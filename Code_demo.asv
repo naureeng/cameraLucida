@@ -1,0 +1,16 @@
+%% Add path to cameraLucida repo
+
+clear; 
+addpath(genpath('C:\Users\Federico\Documents\GitHub\cameraLucida')); 
+
+%% laod example dendritic reconstruction
+
+% load
+[X,Y,Z,soma, parent, id]  = loadSWC(db, 'neuTube', 'dendrites');
+
+%interpolate dendrite with equally spaced sample points
+[X,Y,Z] = cameraLucida.interpSWC(X,Y,Z, parent);
+
+%% plot dendritic morphology
+
+cameraLucida.plot_swcLines();
