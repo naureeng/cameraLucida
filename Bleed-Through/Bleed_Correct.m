@@ -15,5 +15,7 @@ tsStack2 = mat2gray(double(tsStack2));
 p1 = p(1,:);
 R_corr = tsStack2 - polyval(p1, tsStack1);
 
+R_corr = mat2gray(R_corr);
+
 saveFrames(uint16(R_corr*2.^16-1),'R_corr.tif');
 
