@@ -29,9 +29,9 @@ function [] = PolarPlot( thetaMap, fname, db , analysis_type, colorID)
 
 switch analysis_type
     case 'seg'
-        img = strcat(fname, '_theta_seg_polar');
+        img = strcat(fname, '_theta_seg_polar_axial');
     case 'box'
-        img = strcat(fname, '_theta_box_polar');
+        img = strcat(fname, '_theta_box_polar_axial');
 end
 
 %% Step 1: add paths 
